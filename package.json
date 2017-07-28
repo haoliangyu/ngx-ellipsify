@@ -1,0 +1,40 @@
+{
+  "name": "ngx-text-ellipsis",
+  "version": "1.0.0",
+  "description": " text ellipsis attribute directive for Angular 2 and 4 ",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haoliangyu/ngx-text-ellipsis.git"
+  },
+  "author": "Haoliang Yu <haholiang.yu@outlook.com>",
+  "license": "MIT",
+  "keywords": [
+    "ngx",
+    "angular2",
+    "angular4",
+    "text-ellipsis",
+    "attribute-directive"
+  ],
+  "bugs": {
+    "url": "https://github.com/haoliangyu/ngx-text-ellipsis/issues"
+  },
+  "homepage": "https://github.com/haoliangyu/ngx-text-ellipsis#readme",
+  "dependencies": {
+    "@angular/common": "^4.3.2",
+    "@angular/core": "^4.3.2",
+    "rxjs": "^5.4.2",
+    "zone.js": "^0.8.16"
+  },
+  "devDependencies": {
+    "rollup": "^0.45.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.2"
+  }
+}
