@@ -32,14 +32,13 @@ function isTextOverflowing(element) {
   return isOverflowing;
 }
 
-export function ellipsify(container) {
-  let content = container.lastElementChild;
+export function ellipsify(content) {
   let text = content.innerText;
 
-  if (isTextOverflowing(container)) {
+  if (isTextOverflowing(content)) {
     let checkFunc = function (i) {
       content.innerText = text.substring(0, i);
-      return isTextOverflowing(container) ? -1 : 0;
+      return isTextOverflowing(content) ? -1 : 0;
     };
 
     let len = binarySearch(text.length - 1, checkFunc);

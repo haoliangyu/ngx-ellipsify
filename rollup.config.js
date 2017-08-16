@@ -3,8 +3,8 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-  entry: 'src/ngx-ellipsify.ts',
-  dest: 'dest/ngx-ellipsify.js',
+  entry: 'src/module.ts',
+  dest: 'dist/module.js',
   format: 'es',
   plugins: [
     resolve(),
@@ -13,5 +13,5 @@ export default {
     }),
     commonjs()
   ],
-  external: ['@angular/core']
+  external: ['@angular/core', '@angular/common']
 }

@@ -57,4 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
-dest
+dist
+demo/build
+demo/app.d.ts
