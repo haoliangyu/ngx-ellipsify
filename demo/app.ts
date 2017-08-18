@@ -11,17 +11,21 @@ import { EllipsifyModule } from '../src/module';
 @Component({
   selector: 'app-demo',
   template: `
+    <button (click)="changeText()">Change Text</button>
     <div style="height: 50px; width: 50px;" ellipsify>
-      a loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog text
+      {{ text }}
     </div>
-  `,
+  `
 })
 class App {
-  name: string;
+  text: string;
 
   constructor() {
-    console.log('hh');
-    this.name = 'test';
+    this.text = 'a loooooooooooooooooooooooooooooooooooooooooog text';
+  }
+
+  changeText() {
+    this.text = 'another looooooooooooooooooooooooooooooooooooooog text';
   }
 }
 

@@ -19,9 +19,11 @@ export class EllipsifyDirective implements DoCheck {
   }
 
   ngDoCheck() {
+    ellipsify(this.el.nativeElement);
     if (this.el.nativeElement.innerText !== this.originalText) {
       this.originalText = this.el.nativeElement.innerText;
-      ellipsify(this.el.nativeElement);
+
+      return;
     }
 
     let bbox = this.el.nativeElement.getBoundingClientRect();
@@ -30,12 +32,16 @@ export class EllipsifyDirective implements DoCheck {
       this.originalText = this.el.nativeElement.innerText;
       this.originalWidth = bbox.width;
       ellipsify(this.el.nativeElement);
+
+      return;
     }
 
     if (this.originalHeight !== bbox.height) {
       this.originalText = this.el.nativeElement.innerText;
       this.originalHeight = bbox.height;
       ellipsify(this.el.nativeElement);
+
+      return;
     }
   }
 }
